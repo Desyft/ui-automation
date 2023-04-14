@@ -9,7 +9,7 @@ import puppeteer from "puppeteer";
     const searchQuery = "Apply for a number plate";
     const locQuery = {
       query: "Sydney Domestic Airport 2020",
-      result: "Marrickville Service Centre",
+      result: "Marrickville Service Centre ",
     };
     const baseUrl = "https://www.service.nsw.gov.au";
 
@@ -22,7 +22,7 @@ import puppeteer from "puppeteer";
 
     // Type into search box
     const searchElement = await page.waitForSelector(
-      'input[aria-controls^="homeautosuggestKcpXb"]'
+      'input[aria-controls^="homeautosuggest"]'
     );
     await searchElement.type(searchQuery);
     // await page.click('div[id="homeautosuggestDXr-hmpYxc4"]+div>button');
